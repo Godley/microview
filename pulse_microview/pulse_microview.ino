@@ -145,17 +145,7 @@ void loop(){
 		}
 	}
 	delay(IBI);
-  ledFadeToBeat();
-  
-  delay(20);                             //  take a break
 }
-
-
-void ledFadeToBeat(){
-    fadeRate -= 15;                         //  set LED fade value
-    fadeRate = constrain(fadeRate,0,255);   //  keep LED fade value from going into negative numbers!
-    analogWrite(fadePin,fadeRate);          //  fade LED
-  }
 
 
 void sendDataToProcessing(char symbol, int data ){
